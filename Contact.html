@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Contact form</title>
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+</head>
+<body>
+<header>
+    <h1>Fast getaway travel</h1>
+</header>
+<nav class="menu">
+    <ul id="menulist"></ul>
+    <script src="js/menu.js"></script>
+</nav>
+<p id="intro"> Please fill in this form and we will get back to you asap!</p>
+<div id="contactform">
+
+    <p id="output"  ></p>
+
+    <div class="container">
+        <form id="formWrite">
+            <p>
+                <label>Your email </label>
+                <input required type="email" id="email"/>
+            </p>
+            <p>
+                <label>Where do wish to travel </label>
+                <input type="text" id="destinationSubject"/>
+            </p>
+            <p>
+                <label> Tell us who you are and how much you can offer us for your safe passage </label>
+                <textarea id="confession" rows="10" cols="67" wrap="soft">
+                </textarea>
+            </p>
+
+            <p>
+                <input id="send" type="submit" value="Send"/>
+            </p>
+        </form>
+    </div>
+    <script src="js/form.js"></script>
+</div>
+</div>
+</body>
+</html>

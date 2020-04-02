@@ -1,0 +1,218 @@
+body{
+    background-color: navajowhite;
+    color: black;
+    margin: 20px;
+    font-family: Helvetica, Arial, san-serif;
+}
+
+h1{
+    font-family: Georgia, Helvetica, Arial, san-serif;
+    font-size: 40px;
+    font-weight: bold;
+    color: black;
+    margin-bottom: 12px;
+}
+
+p{
+    font-size: 16px;
+    line-height:130%;
+    padding: 0;
+    margin: 0;
+    margin-bottom: 7px;
+}
+
+section{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto auto 50px;
+    grid-template-areas:
+            "header"
+            "navigation"
+            "main-content"
+            "footer";
+    grid-gap: 20px;
+}
+
+header{
+    grid-area: header;
+    padding: 10px;
+}
+
+nav{
+    grid-area: navigation;
+    display: flex;
+    flex-direction: column;
+}
+
+nav a{
+    flex: 1;
+    padding: 20px;
+    text-align: center;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+nav a:hover{
+    text-decoration: underline;
+}
+
+ul{
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
+
+li{
+    margin-bottom: 7px;
+}
+
+a {
+    font-size: 18px;
+    color: firebrick;
+    text-decoration: none;
+}
+
+main{
+    grid-area: main-content;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 10px;
+}
+
+main article{
+    padding: 10px;
+    max-width: 100%;
+    height: auto;
+}
+main article:hover{
+    opacity: 0.5;
+}
+footer{
+    grid-area: footer;
+}
+
+.start_img{
+    max-width: 100%;
+    height: auto;
+}
+
+
+/* Tablet */
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+    /* Ändrar storlek på fonter */
+    h1{
+        font-size: 30px;
+    }
+
+    p{
+        font-size: 12px;
+    }
+
+    a{
+        font-size:  14px;
+    }
+
+    /* Centrerar grid-container och bestämmer 1000px bredd */
+    section.grid-container{
+        width: 1000px;
+        margin: 20px auto;
+    }
+
+    header{
+        text-align: center;
+    }
+
+    /* Ändrar grid columns till 1fr 1fr (2 enheter bredvid varandra) */
+    main{
+        grid-template-columns: 1fr 1fr;
+    }
+
+}
+
+/* Desktop */
+@media screen and (min-width: 1025px) {
+    /* Ändrar storlek på fonter */
+    h1{
+        font-size: 30px;
+    }
+
+    p{
+        font-size: 14px;
+    }
+
+    a{
+        font-size: 20px;
+    }
+
+    /* Centrerar grid-container och bestämmer 1000px bredd */
+    section.grid-container{
+        width: 1000px;
+        margin: 20px auto;
+    }
+
+    h1{
+        font-size: 30px;
+        color: #11FF82;
+    }
+    header{
+        text-align: center;
+        height:250px;
+        text-autospace: punctuation;
+        text-anchor:middle;
+        background-image: url("../img/175544661.jpg");
+        background-repeat:no-repeat;
+        background-position: center;
+        background-size:700px 200px;
+
+    }
+
+
+    /* Ändrar grid columns till 1fr 1fr (2 enheter bredvid varandra) */
+    main{
+        grid-template-columns: 1fr 1fr;
+    }
+    main article{
+        padding: 10px;
+    }
+    nav.menu{
+
+        grid-template-columns: auto;
+        flex-direction: row;
+        text-align: center;
+        padding: 8px;
+        justify-content: center;
+        align-items: center;
+    }
+    nav a:hover
+    {
+        font-size: 35px;
+        opacity: 0.5;
+    }
+    ul{
+        display: flex;
+
+    }
+    #output{
+        font-size: x-large;
+        align-content: center;
+        font-weight: bold;
+    }
+    #skicka {
+        width: 20em;  height: 2em;
+    }
+    #contactform{
+        grid-columns: 1 ;
+        width: 500px;
+        grid-row: 7;
+        align-content: center;
+    }
+    .container input {
+        width: 100%;
+        clear: both;
+    }
+    #intro{
+        font-weight: bold;
+        font-size: 20px;
+    }
+
+}
